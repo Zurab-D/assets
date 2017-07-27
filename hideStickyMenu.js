@@ -13,7 +13,7 @@ function hideStickyMenu (vSelector, toggle, vTop) {
             console.log('-');
             headerNav.style.display = 'none';
         } else {
-            console.log('+');
+            console.log(`+ :: (${top} > ${vTop} && ((${toggle} && ${prevTopPos} < ${top}) || !${toggle})`);
             headerNav.removeAttribute('style');
         }
         prevTopPos = top;
