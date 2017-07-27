@@ -31,5 +31,4 @@ function hideStickyMenu (vSelector) {
     window.addEventListener('scroll', function() {
         scrollProcessing();
     });
-    document.querySelector('.sumome-share-client').remove();
 };
