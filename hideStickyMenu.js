@@ -10,8 +10,10 @@ function hideStickyMenu (vSelector, toggle, vTop) {
     function doTheJob() {
         let top = window.pageYOffset || document.documentElement.scrollTop;
         if (top > vTop && ((toggle && prevTopPos < top) || !toggle)) {
+            console.log('-');
             headerNav.style.display = 'none';
         } else {
+            console.log('+');
             headerNav.removeAttribute('style');
         }
         prevTopPos = top;
