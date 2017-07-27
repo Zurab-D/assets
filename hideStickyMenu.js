@@ -30,6 +30,6 @@ function hideStickyMenu (vSelector) {
     /** повесим на событие скроллинга свой обработчик */
     window.addEventListener('scroll', function() {
         scrollProcessing();
-        document.querySelector('.sumome-share-client').remove();
     });
+    document.querySelector('.sumome-share-client').remove();
 };
