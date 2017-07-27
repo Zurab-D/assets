@@ -9,7 +9,7 @@ function hideStickyMenu (vSelector, toggle, vTop) {
     /** Основная функция - проверить позицию и показать/спрятать шапку сайта */
     function doTheJob() {
         let top = window.pageYOffset || document.documentElement.scrollTop;
-        console.log(`+ :: (${top} > ${vTop} && ((${toggle} && ${prevTopPos} < ${top}) || !${toggle}))`);
+        console.log(`::::: (${top} > ${vTop} && ((${toggle} && ${prevTopPos} < ${top}) || !${toggle}))`);
         if (top > vTop && ((toggle && prevTopPos < top) || !toggle)) {
             console.log('-');
             headerNav.style.display = 'none';
