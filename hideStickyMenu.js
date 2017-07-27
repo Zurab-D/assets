@@ -1,5 +1,4 @@
-function hideStickyMenu (vSelector, toggle) {
-    var toggle = toggle | true;
+function hideStickyMenu (vSelector, toggle = true, vTop = 50) {
     var prevTopPos = 0;
     var scrollTimeout; // таймер для прореживания обработки события скроллинга
     var TIMEOUT_SCROLL = 10; // длительность прореживания скроллинга
@@ -8,9 +7,12 @@ function hideStickyMenu (vSelector, toggle) {
     /** Основная функция - проверить позицию и показать/спрятать шапку сайта */
     function doTheJob() {
         let top = window.pageYOffset || document.documentElement.scrollTop;
-        if (top > 100 && ((toggle && prevTopPos < top) || !toggle)) {
+        // console.log(`::::: (${top} > ${vTop} && ((${toggle} && ${prevTopPos} < ${top}) || !${toggle}))`);
+        if (top > vTop && (!toggle || (prevTopPos < top))) {
+            //console.log('-');
             headerNav.style.display = 'none';
         } else {
+            //console.log('+');
             headerNav.removeAttribute('style');
         }
         prevTopPos = top;
