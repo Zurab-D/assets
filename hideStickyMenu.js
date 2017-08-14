@@ -10,10 +10,13 @@ function hideStickyMenu (vSelector, toggle = true, vTop = 50) {
         // console.log(`::::: (${top} > ${vTop} && ((${toggle} && ${prevTopPos} < ${top}) || !${toggle}))`);
         if (top > vTop && (!toggle || (prevTopPos < top))) {
             //console.log('-');
-            headerNav.style.display = 'none';
+            //headerNav.style.display = 'none';
+            headerNav.style.transition = '0.3s';
+            headerNav.style.marginTop = -headerNav.offsetHeight + 'px';
         } else {
             //console.log('+');
-            headerNav.removeAttribute('style');
+            //headerNav.removeAttribute('style');
+            headerNav.style.marginTop = '';
         }
         prevTopPos = top;
     }
