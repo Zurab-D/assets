@@ -11,12 +11,12 @@ function hideStickyMenu (vSelector, toggle = true, vTop = 50) {
         if (top > vTop && (!toggle || (prevTopPos < top))) {
             //console.log('-');
             //headerNav.style.display = 'none';
-            mnu.style.transition = '0.3s';
-            mnu.style.marginTop = '-50px';
+            headerNav.style.transition = '0.3s';
+            headerNav.style.marginTop = '-50px';
         } else {
             //console.log('+');
             //headerNav.removeAttribute('style');
-            mnu.style.marginTop = '';
+            headerNav.style.marginTop = '';
         }
         prevTopPos = top;
     }
