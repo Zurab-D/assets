@@ -12,7 +12,7 @@ function hideStickyMenu (vSelector, toggle = true, vTop = 50) {
             //console.log('-');
             //headerNav.style.display = 'none';
             headerNav.style.transition = '0.3s';
-            headerNav.style.marginTop = '-50px';
+            headerNav.style.marginTop = -headerNav.offsetHeight + 'px';
         } else {
             //console.log('+');
             //headerNav.removeAttribute('style');
